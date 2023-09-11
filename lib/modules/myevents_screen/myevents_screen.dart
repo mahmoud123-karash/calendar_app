@@ -54,13 +54,20 @@ class _MyEventsScreenState extends State<MyEventsScreen> {
           ),
           body: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ListView.builder(
-              itemBuilder: (context, index) => MyEventWidget(
-                isdark: isdark,
-                myevent: myevents[index],
-              ),
-              itemCount: myevents.length,
-            ),
+            child: myevents.isEmpty
+                ? Center(
+                    child: Text(
+                      S.of(context).nomyevents,
+                      style: const TextStyle(fontSize: 20),
+                    ),
+                  )
+                : ListView.builder(
+                    itemBuilder: (context, index) => MyEventWidget(
+                      isdark: isdark,
+                      myevent: myevents[index],
+                    ),
+                    itemCount: myevents.length,
+                  ),
           ),
         );
       },

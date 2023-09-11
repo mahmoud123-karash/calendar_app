@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "message": MessageLookupByLibrary.simpleMessage(""),
         "myevent": MessageLookupByLibrary.simpleMessage(""),
         "noevents": MessageLookupByLibrary.simpleMessage(""),
+        "nomyevents": MessageLookupByLibrary.simpleMessage(""),
         "noti": MessageLookupByLibrary.simpleMessage(""),
         "notification": MessageLookupByLibrary.simpleMessage(""),
         "settings": MessageLookupByLibrary.simpleMessage(""),

@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "myevent": MessageLookupByLibrary.simpleMessage("مناسباتى"),
         "noevents":
             MessageLookupByLibrary.simpleMessage("لا يوجد أحداث حتى الآن"),
+        "nomyevents": MessageLookupByLibrary.simpleMessage(
+            "لم تقم بإضافة مناسبات حتى الآن"),
         "noti": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "notification": MessageLookupByLibrary.simpleMessage("تفعيل الإشعارات"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),

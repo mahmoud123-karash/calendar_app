@@ -309,6 +309,16 @@ class S {
       args: [],
     );
   }
+
+  /// ``
+  String get nomyevents {
+    return Intl.message(
+      '',
+      name: 'nomyevents',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
