@@ -45,17 +45,13 @@ class CalendarCubit extends Cubit<CalendarStates> {
     } else if (status.isPermanentlyDenied) {
       sub = false;
     } else if (status.isGranted) {
-      sub = true;
+      sub = cache_helper.getData(key: 'sub') ?? true;
     }
   }
 
-  void subAndUnSub({bool? fromSP}) {
-    if (fromSP != null) {
-      sub = fromSP;
-    } else {
-      sub = !sub!;
-      cache_helper.saveData(key: 'sub', value: sub);
-    }
+  void subAndUnSub() {
+    sub = !sub!;
+    cache_helper.saveData(key: 'sub', value: sub);
     emit(ChangeNotificationState());
   }
 
@@ -206,7 +202,7 @@ class CalendarCubit extends Cubit<CalendarStates> {
   }
 
   String appLink =
-      'https://play.google.com/store/apps/details?id=com.example.myapp';
+      'https://play.google.com/store/apps/details?id=com.example.calendar_app';
 
   String message = 'Check out my new app:';
 
