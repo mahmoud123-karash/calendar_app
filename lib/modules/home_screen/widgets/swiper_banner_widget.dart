@@ -15,7 +15,7 @@ class SwiperBannerWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: SizedBox(
-        height: 180,
+        height: 200,
         child: Swiper(
           onTap: (index) async {
             CalendarCubit.get(context).openBrowser(uri: banners[index].uri!);

@@ -8,12 +8,18 @@ class HeaderDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return DrawerHeader(
       margin: const EdgeInsets.all(10),
-      child: Container(
-        width: 100,
-        height: 100,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(Assets.cal2),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          width: 100,
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(
+              Radius.circular(100),
+            ),
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(Assets.cal2),
+            ),
           ),
         ),
       ),
