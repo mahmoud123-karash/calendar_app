@@ -5,8 +5,9 @@ import 'package:calendar_app/shared/constants.dart';
 import 'package:flutter/material.dart';
 
 class EventDetails extends StatelessWidget {
-  const EventDetails({super.key, required this.event});
+  const EventDetails({super.key, required this.event, required this.isdark});
   final EventModel event;
+  final bool isdark;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,8 @@ class EventDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (event.image != '') ImageItemWidget(image: event.image!),
+              if (event.image != '')
+                ImageItemWidget(image: event.image!, isdark: isdark),
               if (event.image != '')
                 const SizedBox(
                   height: 15,

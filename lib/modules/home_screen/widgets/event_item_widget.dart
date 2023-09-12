@@ -19,6 +19,7 @@ class EventItemWidget extends StatelessWidget {
             context,
             EventDetails(
               event: event,
+              isdark: isdark,
             ),
           );
         },

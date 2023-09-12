@@ -71,12 +71,11 @@ class NotificationService {
   Future showOnNotification({
     required int id,
     required String title,
-    required String body,
   }) async {
     return flutterLocalNotificationsPlugin.show(
       id,
       title,
-      body,
+      '',
       await notificationDetails(),
     );
   }
