@@ -1,5 +1,4 @@
 // ignore_for_file: depend_on_referenced_packages
-
 import 'package:calendar_app/cubit/calendar_cubit.dart';
 import 'package:calendar_app/cubit/calendar_states.dart';
 import 'package:calendar_app/layout/Layout_screen.dart';
@@ -12,12 +11,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:calendar_app/generated/l10n.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
-
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Permission.notification.isDenied.then((value) {
+    if (value) {
+      Permission.notification.request();
+    }
+  });
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -41,7 +45,7 @@ class MyApp extends StatelessWidget {
             ..getEvents()
             ..getBanners()
             ..openDataBase()
-            ..subAndUnSub(fromSP: cache_helper.getData(key: 'sub') ?? true),
+            ..subAndUnSub(fromSP: cache_helper.getData(key: 'sub')),
         )
       ],
       child: BlocBuilder<CalendarCubit, CalendarStates>(

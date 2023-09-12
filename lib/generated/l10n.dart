@@ -319,6 +319,36 @@ class S {
       args: [],
     );
   }
+
+  /// ``
+  String get permisd {
+    return Intl.message(
+      '',
+      name: 'permisd',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get ok {
+    return Intl.message(
+      '',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get no {
+    return Intl.message(
+      '',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

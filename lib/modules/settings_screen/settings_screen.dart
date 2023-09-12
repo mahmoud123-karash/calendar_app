@@ -6,6 +6,7 @@ import 'package:calendar_app/modules/settings_screen/widgets/text_titile_widget.
 import 'package:calendar_app/shared/components.dart';
 import 'package:calendar_app/shared/constants.dart';
 import 'package:calendar_app/utils/firebase_messging.dart';
+import 'package:calendar_app/utils/notification_permission.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -36,12 +37,17 @@ class SettingsScreen extends StatelessWidget {
                 ),
                 trailing: Checkbox(
                   value: CalendarCubit.get(context).sub,
-                  onChanged: (value) {
-                    CalendarCubit.get(context).subAndUnSub();
+                  onChanged: (value) async {
                     if (value!) {
-                      subscribeToTopic();
-                      myToast(message: S.of(context).sub);
+                      requestNotificationPermissions(
+                          context: context,
+                          ontap: () {
+                            subscribeToTopic();
+                            myToast(message: S.of(context).sub);
+                            CalendarCubit.get(context).subAndUnSub();
+                          });
                     } else {
+                      CalendarCubit.get(context).subAndUnSub();
                       unSubscribeToTopic();
                       myToast(message: S.of(context).unsub);
                     }

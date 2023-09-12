@@ -23,9 +23,10 @@ class EventDetails extends StatelessWidget {
             children: [
               if (event.image != '')
                 ImageItemWidget(image: event.image!, isdark: isdark),
-              const SizedBox(
-                height: 15,
-              ),
+              if (event.image != '')
+                const SizedBox(
+                  height: 15,
+                ),
               Row(
                 children: [
                   Text(

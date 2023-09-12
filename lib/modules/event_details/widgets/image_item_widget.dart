@@ -10,21 +10,19 @@ class ImageItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 200,
-      child: Expanded(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: Center(
-            child: CachedNetworkImage(
-              width: double.infinity,
-              fit: BoxFit.cover,
-              imageUrl: image,
-              progressIndicatorBuilder: (context, url, downloadProgress) =>
-                  Container(
-                color: isdark ? Colors.white : Colors.black,
-              ),
-              errorWidget: (context, url, error) =>
-                  const Icon(Icons.image_search_rounded),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: Center(
+          child: CachedNetworkImage(
+            width: double.infinity,
+            fit: BoxFit.cover,
+            imageUrl: image,
+            progressIndicatorBuilder: (context, url, downloadProgress) =>
+                Container(
+              color: isdark ? Colors.white : Colors.black,
             ),
+            errorWidget: (context, url, error) =>
+                const Icon(Icons.image_search_rounded),
           ),
         ),
       ),

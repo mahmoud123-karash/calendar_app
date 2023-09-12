@@ -6,6 +6,8 @@ class ChangeAppThemeState extends CalendarStates {}
 
 class ChangeNotificationState extends CalendarStates {}
 
+class CheckPermissionState extends CalendarStates {}
+
 //open database
 class LoadingOpenDatabaseState extends CalendarStates {}
 

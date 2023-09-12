@@ -12,6 +12,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_share/flutter_share.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -23,19 +24,36 @@ class CalendarCubit extends Cubit<CalendarStates> {
   void changeAppTheme({bool? fromSP}) {
     if (fromSP != null) {
       isdark = fromSP;
+      emit(ChangeAppThemeState());
     } else {
       isdark = !isdark;
       cache_helper.saveData(key: 'isdark', value: isdark);
+      emit(ChangeAppThemeState());
     }
-    emit(ChangeAppThemeState());
   }
 
-  bool sub = false;
+  bool? sub;
+  Future<void> requestNotificationPermissions() async {
+    if (await Permission.notification.isPermanentlyDenied) {
+      sub = false;
+    }
+
+    PermissionStatus status = await Permission.notification.request();
+
+    if (status.isDenied) {
+      sub = false;
+    } else if (status.isPermanentlyDenied) {
+      sub = false;
+    } else if (status.isGranted) {
+      sub = true;
+    }
+  }
+
   void subAndUnSub({bool? fromSP}) {
     if (fromSP != null) {
       sub = fromSP;
     } else {
-      sub = !sub;
+      sub = !sub!;
       cache_helper.saveData(key: 'sub', value: sub);
     }
     emit(ChangeNotificationState());
