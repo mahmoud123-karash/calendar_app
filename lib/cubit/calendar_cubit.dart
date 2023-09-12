@@ -19,7 +19,7 @@ class CalendarCubit extends Cubit<CalendarStates> {
   CalendarCubit() : super(InitailCalendarState());
   static CalendarCubit get(context) => BlocProvider.of(context);
 
-  bool isdark = false;
+  bool isdark = true;
   void changeAppTheme({bool? fromSP}) {
     if (fromSP != null) {
       isdark = fromSP;
@@ -30,7 +30,7 @@ class CalendarCubit extends Cubit<CalendarStates> {
     emit(ChangeAppThemeState());
   }
 
-  bool sub = true;
+  bool sub = false;
   void subAndUnSub({bool? fromSP}) {
     if (fromSP != null) {
       sub = fromSP;

@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             ..getEvents()
             ..getBanners()
             ..openDataBase()
-            ..subAndUnSub(fromSP: cache_helper.getData(key: 'sub')),
+            ..subAndUnSub(fromSP: cache_helper.getData(key: 'sub') ?? true),
         )
       ],
       child: BlocBuilder<CalendarCubit, CalendarStates>(

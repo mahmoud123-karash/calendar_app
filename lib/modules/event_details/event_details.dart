@@ -23,17 +23,20 @@ class EventDetails extends StatelessWidget {
             children: [
               if (event.image != '')
                 ImageItemWidget(image: event.image!, isdark: isdark),
-              if (event.image != '')
-                const SizedBox(
-                  height: 15,
-                ),
-              Text(
-                " ${S.of(context).eventname}:",
-                style: TextStyle(
-                  color: myColor,
-                  fontSize: 25,
-                  fontWeight: FontWeight.w600,
-                ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                children: [
+                  Text(
+                    " ${S.of(context).eventname}:",
+                    style: TextStyle(
+                      color: myColor,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
               Text(
                 event.title!,
@@ -43,7 +46,6 @@ class EventDetails extends StatelessWidget {
               ),
               const SizedBox(
                 height: 15,
-                width: double.infinity,
               ),
               Text(
                 " ${S.of(context).eventdate}:",
