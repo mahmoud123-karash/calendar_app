@@ -10,6 +10,7 @@ Future<void> requestNotificationPermissions({context, ontap}) async {
           context: context,
           ontap: () {
             openAppSettings();
+            Navigator.pop(context);
           },
           oncancel: () {
             Navigator.pop(context);
@@ -27,6 +28,7 @@ Future<void> requestNotificationPermissions({context, ontap}) async {
           context: context,
           ontap: () {
             openAppSettings();
+            Navigator.pop(context);
           },
           oncancel: () {
             Navigator.pop(context);
@@ -39,6 +41,7 @@ Future<void> requestNotificationPermissions({context, ontap}) async {
           context: context,
           ontap: () {
             openAppSettings();
+            Navigator.pop(context);
           },
           oncancel: () {
             Navigator.pop(context);

@@ -40,13 +40,11 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => CalendarCubit()
-            ..changeAppTheme(fromSP: cache_helper.getData(key: 'isdark'))
-            ..getEvents()
-            ..getBanners()
-            ..openDataBase()
-            ..subAndUnSub(fromSP: cache_helper.getData(key: 'sub')),
-        )
+            create: (context) => CalendarCubit()
+              ..changeAppTheme(fromSP: cache_helper.getData(key: 'isdark'))
+              ..getEvents()
+              ..getBanners()
+              ..openDataBase())
       ],
       child: BlocBuilder<CalendarCubit, CalendarStates>(
         builder: (context, state) {
