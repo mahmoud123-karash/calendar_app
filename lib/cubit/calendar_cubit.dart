@@ -55,7 +55,7 @@ class CalendarCubit extends Cubit<CalendarStates> {
     emit(ChangeNotificationState());
   }
 
-//sqflite
+//sqflite local database
   Database? database;
   void openDataBase() {
     emit(LoadingOpenDatabaseState());
