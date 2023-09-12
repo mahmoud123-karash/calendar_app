@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:calendar_app/cubit/calendar_cubit.dart';
 import 'package:calendar_app/models/banner_model.dart';
 import 'package:card_swiper/card_swiper.dart';
@@ -22,9 +23,17 @@ class SwiperBannerWidget extends StatelessWidget {
           itemCount: banners.length,
           itemBuilder: (context, index) => ClipRRect(
             borderRadius: BorderRadius.circular(15),
-            child: Image.network(
-              banners[index].image!,
+            child: CachedNetworkImage(
+              maxHeightDiskCache: 10,
               fit: BoxFit.cover,
+              imageUrl: banners[index].image!,
+              progressIndicatorBuilder: (context, url, downloadProgress) =>
+                  const Icon(
+                Icons.image_outlined,
+                size: 30,
+              ),
+              errorWidget: (context, url, error) =>
+                  const Icon(Icons.image_search_rounded),
             ),
           ),
         ),

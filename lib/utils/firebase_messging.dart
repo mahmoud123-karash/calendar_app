@@ -37,10 +37,8 @@ void initialFMessage(initialMessage) {
 void onMessage() {
   FirebaseMessaging.onMessage.listen(
     (message) {
-      NotificationService().showOnNotification(
-          id: 1,
-          title: message.notification!.title!,
-          body: message.notification!.body!);
+      NotificationService()
+          .showOnNotification(id: 1, title: message.notification!.title!);
     },
   );
 }
@@ -51,6 +49,7 @@ void onMessageOpenedApp(context) {
       navigatorTo(
         context,
         EventDetails(
+          isdark: true,
           event: EventModel(
             id: '',
             title: message.notification!.title,

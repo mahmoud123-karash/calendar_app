@@ -2,7 +2,7 @@ name: calendar_app
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.0 <4.0.0'
+  sdk: ">=3.1.0 <4.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -28,11 +28,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cached_network_image: ^3.2.3
   card_swiper: ^3.0.1
-  carousel_slider: ^4.2.1
   cloud_firestore: ^4.9.0
   cupertino_icons: ^1.0.2
-  dart_jsonwebtoken: ^2.11.0
   firebase_auth: ^4.8.0
   firebase_core: ^2.15.1
   firebase_messaging: ^14.6.7
@@ -45,7 +44,6 @@ dependencies:
   flutter_share: ^2.0.0
   flutter_zoom_drawer: ^3.1.1
   fluttertoast: ^8.2.2
-  http: ^1.1.0
   intl: ^0.18.1
   jhijri: ^1.0.0
   jhijri_picker: ^1.0.1
@@ -63,7 +61,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
