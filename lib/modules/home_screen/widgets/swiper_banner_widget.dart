@@ -5,8 +5,10 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 
 class SwiperBannerWidget extends StatelessWidget {
-  const SwiperBannerWidget({super.key, required this.banners});
+  const SwiperBannerWidget(
+      {super.key, required this.banners, required this.isdark});
   final List<BannerModel> banners;
+  final bool isdark;
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +30,8 @@ class SwiperBannerWidget extends StatelessWidget {
               fit: BoxFit.cover,
               imageUrl: banners[index].image!,
               progressIndicatorBuilder: (context, url, downloadProgress) =>
-                  const Icon(
-                Icons.image_outlined,
-                size: 30,
+                  Container(
+                color: isdark ? Colors.white : Colors.black,
               ),
               errorWidget: (context, url, error) =>
                   const Icon(Icons.image_search_rounded),

@@ -47,7 +47,6 @@ dependencies:
   intl: ^0.18.1
   jhijri: ^1.0.0
   jhijri_picker: ^1.0.1
-  pointycastle: ^3.7.3
   shared_preferences: ^2.2.1
   sqflite: ^2.3.0
   url_launcher: ^6.1.14

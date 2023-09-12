@@ -37,8 +37,10 @@ void initialFMessage(initialMessage) {
 void onMessage() {
   FirebaseMessaging.onMessage.listen(
     (message) {
-      NotificationService()
-          .showOnNotification(id: 1, title: message.notification!.title!);
+      NotificationService().showOnNotification(
+        id: 1,
+        title: message.notification!.title!,
+      );
     },
   );
 }
@@ -66,20 +68,6 @@ void onMessageOpenedApp(context) {
 
 Future onBackgroundMessage(context) async {
   FirebaseMessaging.onBackgroundMessage(
-    (message) async {
-      // navigatorTo(
-      //   context,
-      //   EventDetails(
-      //     event: EventModel(
-      //       id: '',
-      //       title: message.notification!.title,
-      //       description: message.data['des'],
-      //       dateJ: message.data['dateJ'],
-      //       image: message.data['image'],
-      //       dateM: message.data['dateM'],
-      //     ),
-      //   ),
-      // );
-    },
+    (message) async {},
   );
 }
