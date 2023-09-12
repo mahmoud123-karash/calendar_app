@@ -38,12 +38,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "message": MessageLookupByLibrary.simpleMessage(
             "لا تستطيع إضافة مناسبة فى نفس اليوم"),
         "myevent": MessageLookupByLibrary.simpleMessage("مناسباتى"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "noevents":
             MessageLookupByLibrary.simpleMessage("لا يوجد أحداث حتى الآن"),
         "nomyevents": MessageLookupByLibrary.simpleMessage(
             "لم تقم بإضافة مناسبات حتى الآن"),
         "noti": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "notification": MessageLookupByLibrary.simpleMessage("تفعيل الإشعارات"),
+        "ok": MessageLookupByLibrary.simpleMessage("الإعدادات"),
+        "permisd": MessageLookupByLibrary.simpleMessage(
+            "من فضلك قم بمنح إذن الإشعارات"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "share": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
         "sub": MessageLookupByLibrary.simpleMessage("تم تفعيل الإشعارات"),

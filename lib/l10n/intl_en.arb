@@ -25,6 +25,9 @@
     "themes":"",
     "sub":"",
     "unsub":"",
-    "nomyevents":""
+    "nomyevents":"",
+    "permisd":"",
+    "ok":"",
+    "no":""
     
 }
