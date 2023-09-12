@@ -36,38 +36,43 @@ class HomeScreen extends StatelessWidget {
                     icon: const Icon(Icons.menu)),
                 title: Text(S.of(context).title),
               ),
-              body: Column(
-                children: [
-                  if (banners.isNotEmpty) SwiperBannerWidget(banners: banners),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  DateWidget(isdark: isdark),
-                  state is LoadingGetEventsState
-                      ? const Padding(
-                          padding: EdgeInsets.all(20.0),
-                          child: Center(child: CircularProgressIndicator()),
-                        )
-                      : events.isEmpty
-                          ? Padding(
-                              padding: const EdgeInsets.all(20.0),
-                              child: Text(S.of(context).noevents),
-                            )
-                          : Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ListView.builder(
-                                  itemBuilder: (context, index) =>
-                                      EventItemWidget(
-                                    isdark: isdark,
-                                    event: events[index],
-                                  ),
-                                  itemCount: events.length,
-                                ),
-                              ),
-                            )
-                ],
-              ),
+              body: state is! SuccessGetBannersState &&
+                      state is! SuccessOpenDatabaseState
+                  ? const Center(child: CircularProgressIndicator())
+                  : Column(
+                      children: [
+                        if (banners.isNotEmpty)
+                          SwiperBannerWidget(banners: banners),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DateWidget(isdark: isdark),
+                        state is LoadingGetEventsState
+                            ? const Padding(
+                                padding: EdgeInsets.all(20.0),
+                                child:
+                                    Center(child: CircularProgressIndicator()),
+                              )
+                            : events.isEmpty
+                                ? Padding(
+                                    padding: const EdgeInsets.all(20.0),
+                                    child: Text(S.of(context).noevents),
+                                  )
+                                : Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: ListView.builder(
+                                        itemBuilder: (context, index) =>
+                                            EventItemWidget(
+                                          isdark: isdark,
+                                          event: events[index],
+                                        ),
+                                        itemCount: events.length,
+                                      ),
+                                    ),
+                                  )
+                      ],
+                    ),
             );
           },
         );
