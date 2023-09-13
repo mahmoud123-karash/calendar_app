@@ -13,9 +13,6 @@ class HeaderDrawerWidget extends StatelessWidget {
         child: Container(
           width: 100,
           decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(
-              Radius.circular(100),
-            ),
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(Assets.cal2),
