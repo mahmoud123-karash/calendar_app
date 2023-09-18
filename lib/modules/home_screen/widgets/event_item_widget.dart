@@ -11,6 +11,8 @@ class EventItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: GestureDetector(
@@ -35,12 +37,18 @@ class EventItemWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      event.title!,
-                      style: TextStyle(
+                    Container(
+                      constraints: BoxConstraints(maxWidth: size.width - 60),
+                      child: Text(
+                        event.title!,
+                        style: TextStyle(
                           color: myColor,
                           fontSize: 22,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w600,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.fade,
+                      ),
                     ),
                     Text(
                       '${event.dateM}',

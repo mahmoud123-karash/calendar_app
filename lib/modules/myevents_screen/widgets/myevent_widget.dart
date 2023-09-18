@@ -10,6 +10,7 @@ class MyEventWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       child: Container(
@@ -24,20 +25,28 @@ class MyEventWidget extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    width: 250,
+                  Container(
+                    constraints: BoxConstraints(
+                      maxWidth: size.width / 1.5,
+                    ),
                     child: Text(
-                      myevent['name'],
+                      "${myevent['name']}",
                       style: TextStyle(
                           color: myColor,
-                          fontSize: 20,
+                          fontSize: 22,
                           fontWeight: FontWeight.w600),
-                      maxLines: 1,
+                      maxLines: 2,
                     ),
                   ),
-                  Text(
-                    myevent['date'],
-                    style: const TextStyle(fontSize: 16),
+                  Container(
+                    constraints: BoxConstraints(
+                      maxWidth: size.width / 2,
+                    ),
+                    child: Text(
+                      myevent['date'],
+                      style: const TextStyle(fontSize: 18),
+                      maxLines: 2,
+                    ),
                   )
                 ],
               ),
