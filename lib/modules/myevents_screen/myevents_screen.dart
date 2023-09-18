@@ -33,10 +33,11 @@ class _MyEventsScreenState extends State<MyEventsScreen> {
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               navigatorTo(
-                  context,
-                  AddEventDetails(
-                    isdark: isdark,
-                  ));
+                context,
+                AddEventDetails(
+                  isdark: isdark,
+                ),
+              );
             },
             child: const Icon(Icons.add),
           ),
