@@ -202,7 +202,7 @@ class CalendarCubit extends Cubit<CalendarStates> {
   }
 
   String appLink =
-      'https://play.google.com/store/apps/details?id=com.example.calendar_app';
+      'https://play.google.com/store/apps/details?id=com.malki.calendar_app';
 
   String message = 'Check out my new app:';
 
