@@ -5,6 +5,7 @@ class EventModel {
   String? dateJ;
   String? image;
   String? description;
+  String? dateO;
 
   EventModel(
       {this.image,
@@ -12,7 +13,8 @@ class EventModel {
       this.title,
       this.dateJ,
       this.description,
-      this.dateM});
+      this.dateM,
+      this.dateO});
 
   @override
   bool operator ==(Object other) =>
@@ -24,6 +26,7 @@ class EventModel {
           dateJ == other.dateJ &&
           dateM == other.dateM &&
           id == other.id &&
+          dateO == other.dateO &&
           image == other.image;
 
   @override
@@ -32,6 +35,7 @@ class EventModel {
       description.hashCode ^
       image.hashCode ^
       dateM.hashCode ^
+      dateO.hashCode ^
       id.hashCode ^
       dateJ.hashCode;
 
@@ -41,6 +45,7 @@ class EventModel {
     dateM = json['dateM'];
     description = json['description'];
     dateJ = json['dateJ'];
+    dateO = json['dateO'];
     id = json['id'];
   }
 
@@ -52,6 +57,7 @@ class EventModel {
       'dateM': dateM,
       'description': description,
       'id': id,
+      'dateO': dateO
     });
   }
 }
