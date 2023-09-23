@@ -17,10 +17,13 @@ class SwiperBannerWidget extends StatelessWidget {
       child: SizedBox(
         height: 200,
         child: Swiper(
+          physics: banners.length == 1
+              ? const NeverScrollableScrollPhysics()
+              : const BouncingScrollPhysics(),
           onTap: (index) async {
             CalendarCubit.get(context).openBrowser(uri: banners[index].uri!);
           },
-          autoplay: true,
+          autoplay: banners.length == 1 ? false : true,
           index: 0,
           itemCount: banners.length,
           itemBuilder: (context, index) => ClipRRect(

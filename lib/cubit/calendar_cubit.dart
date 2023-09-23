@@ -146,7 +146,7 @@ class CalendarCubit extends Cubit<CalendarStates> {
     emit(LoadingGetEventsState());
     FirebaseFirestore.instance
         .collection(year)
-        .orderBy('dateM', descending: false)
+        .orderBy('dateO', descending: false)
         .snapshots()
         .listen((event) {
       events = [];
