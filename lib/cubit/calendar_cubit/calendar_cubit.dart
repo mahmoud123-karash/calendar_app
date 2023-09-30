@@ -6,6 +6,9 @@ import 'package:calendar_app/models/event_model.dart';
 import 'package:calendar_app/models/message_model.dart';
 import 'package:calendar_app/models/notification_service.dart';
 import 'package:calendar_app/models/shared_preference.dart';
+import 'package:calendar_app/modules/home_screen/home_screen.dart';
+import 'package:calendar_app/modules/myevents_screen/myevents_screen.dart';
+import 'package:calendar_app/modules/settings_screen/settings_screen.dart';
 import 'package:calendar_app/shared/components.dart';
 import 'package:calendar_app/shared/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -33,6 +36,18 @@ class CalendarCubit extends Cubit<CalendarStates> {
     }
   }
 
+  int currentindex = 0;
+
+  void getindex(int index) {
+    currentindex = index;
+    emit(ChangeNavBarState());
+  }
+
+  List<Widget> screens = [
+    const HomeScreen(),
+    const MyEventsScreen(),
+    const SettingsScreen(ish: false),
+  ];
   bool? sub;
   Future<void> requestNotificationPermissions() async {
     if (await Permission.notification.isPermanentlyDenied) {

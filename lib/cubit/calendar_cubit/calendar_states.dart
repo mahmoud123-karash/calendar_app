@@ -4,6 +4,8 @@ class InitailCalendarState extends CalendarStates {}
 
 class ChangeAppThemeState extends CalendarStates {}
 
+class ChangeNavBarState extends CalendarStates {}
+
 class ChangeNotificationState extends CalendarStates {}
 
 class CheckPermissionState extends CalendarStates {}

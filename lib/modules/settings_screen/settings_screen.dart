@@ -15,7 +15,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+  const SettingsScreen({super.key, required this.ish});
+  final bool ish;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class SettingsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Center(child: HeaderDrawerWidget()),
+                if (ish) const Center(child: HeaderDrawerWidget()),
                 const SizedBox(
                   height: 30,
                 ),

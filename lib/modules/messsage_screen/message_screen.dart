@@ -35,7 +35,11 @@ class _MessageScreenState extends State<MessageScreen> {
     return BlocConsumer<CalendarCubit, CalendarStates>(
       listener: (context, state) {
         if (state is SuccessSendMessageState) {
-          navigatorToAndfinish(context, const SettingsScreen());
+          navigatorToAndfinish(
+              context,
+              const SettingsScreen(
+                ish: true,
+              ));
           myToast(message: S.of(context).messagesend);
         }
       },

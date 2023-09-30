@@ -3,7 +3,7 @@
 import 'package:calendar_app/cubit/calendar_cubit/calendar_cubit.dart';
 import 'package:calendar_app/cubit/calendar_cubit/calendar_states.dart';
 import 'package:calendar_app/layout/widgets/drawer_widget.dart';
-import 'package:calendar_app/modules/home_screen/home_screen.dart';
+import 'package:calendar_app/modules/navigation_bar_screen/navigation_bar_screen.dart';
 import 'package:calendar_app/utils/firebase_messging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,7 +40,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
         bool isdark = CalendarCubit.get(context).isdark;
         return DrawerWidget(
           isdark: isdark,
-          mainScrenn: const HomeScreen(),
+          mainScrenn: const NavigationBarScreen(),
           zoomDrawerController: zoomDrawerController,
         );
       },
