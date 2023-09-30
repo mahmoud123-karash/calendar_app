@@ -349,6 +349,266 @@ class S {
       args: [],
     );
   }
+
+  /// ``
+  String get loginS {
+    return Intl.message(
+      '',
+      name: 'loginS',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get loginE {
+    return Intl.message(
+      '',
+      name: 'loginE',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get login {
+    return Intl.message(
+      '',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` `
+  String get logout {
+    return Intl.message(
+      ' ',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get pass {
+    return Intl.message(
+      '',
+      name: 'pass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get register {
+    return Intl.message(
+      '',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get noaccount {
+    return Intl.message(
+      '',
+      name: 'noaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` `
+  String get passf {
+    return Intl.message(
+      ' ',
+      name: 'passf',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get fpass {
+    return Intl.message(
+      '',
+      name: 'fpass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get passR {
+    return Intl.message(
+      '',
+      name: 'passR',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get passRS {
+    return Intl.message(
+      '',
+      name: 'passRS',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get rename {
+    return Intl.message(
+      '',
+      name: 'rename',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get rephone {
+    return Intl.message(
+      '',
+      name: 'rephone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get account {
+    return Intl.message(
+      '',
+      name: 'account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get ress {
+    return Intl.message(
+      '',
+      name: 'ress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get next {
+    return Intl.message(
+      '',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get back {
+    return Intl.message(
+      '',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get skip {
+    return Intl.message(
+      '',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get loginSkip {
+    return Intl.message(
+      '',
+      name: 'loginSkip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get logoutq {
+    return Intl.message(
+      '',
+      name: 'logoutq',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get logoutm {
+    return Intl.message(
+      '',
+      name: 'logoutm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get messagem {
+    return Intl.message(
+      '',
+      name: 'messagem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get send {
+    return Intl.message(
+      '',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get messagesend {
+    return Intl.message(
+      '',
+      name: 'messagesend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get privacy {
+    return Intl.message(
+      '',
+      name: 'privacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get profile {
+    return Intl.message(
+      '',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

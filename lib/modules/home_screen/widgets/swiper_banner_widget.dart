@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:calendar_app/cubit/calendar_cubit.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_cubit.dart';
 import 'package:calendar_app/models/banner_model.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';

@@ -66,3 +66,10 @@ class LoadingOpenBrowserState extends CalendarStates {}
 class SuccessOpenBrowserState extends CalendarStates {}
 
 class ErrorOpenBrowserState extends CalendarStates {}
+
+//loading data from database
+class LoadingSendMessageState extends CalendarStates {}
+
+class SuccessSendMessageState extends CalendarStates {}
+
+class ErrorSendMessageState extends CalendarStates {}

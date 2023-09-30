@@ -1,8 +1,9 @@
 // ignore_for_file: unnecessary_null_comparison
-import 'package:calendar_app/cubit/calendar_states.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_states.dart';
 import 'package:calendar_app/generated/l10n.dart';
 import 'package:calendar_app/models/banner_model.dart';
 import 'package:calendar_app/models/event_model.dart';
+import 'package:calendar_app/models/message_model.dart';
 import 'package:calendar_app/models/notification_service.dart';
 import 'package:calendar_app/models/shared_preference.dart';
 import 'package:calendar_app/shared/components.dart';
@@ -201,8 +202,7 @@ class CalendarCubit extends Cubit<CalendarStates> {
     });
   }
 
-  String appLink =
-      'https://play.google.com/store/apps/details?id=com.malki.calendar_app';
+  String appLink = 'https://apps.apple.com/app/id6466894818';
 
   String message = 'Check out my new app:';
 
@@ -234,6 +234,32 @@ class CalendarCubit extends Cubit<CalendarStates> {
         images.add(BannerModel.fromjson(element.data()).image!);
       }
       emit(SuccessGetBannersState());
+    });
+  }
+
+  void sendMessage(
+      {required String email,
+      String? uid,
+      required String message,
+      required String name}) {
+    emit(LoadingSendMessageState());
+    MessageModel umodel = MessageModel(
+      email: email,
+      name: name,
+      message: message,
+      uid: uid,
+    );
+    FirebaseFirestore.instance
+        .collection('messages')
+        .doc(uid)
+        .set(umodel.tomap())
+        .then((value) {
+      emit(SuccessSendMessageState());
+    }).catchError((error) {
+      if (kDebugMode) {
+        print(error);
+      }
+      emit(ErrorSendMessageState());
     });
   }
 }

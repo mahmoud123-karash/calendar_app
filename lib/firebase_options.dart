@@ -28,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -56,21 +59,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAImfEm6SzCiMb-hzh19rjxkAgFd9hFZ5s',
-    appId: '1:802440191160:ios:a05973250bb5ac0f62e84d',
+    appId: '1:802440191160:ios:e637ede192735ab462e84d',
     messagingSenderId: '802440191160',
     projectId: 'academic-calendar-2cbd4',
     storageBucket: 'academic-calendar-2cbd4.appspot.com',
-    iosClientId: '802440191160-pv6cuc2jkhga08b16gc5ulu8pkkhktkp.apps.googleusercontent.com',
-    iosBundleId: 'com.example.calendarApp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAImfEm6SzCiMb-hzh19rjxkAgFd9hFZ5s',
-    appId: '1:802440191160:ios:6dbffb92e33ab5e262e84d',
-    messagingSenderId: '802440191160',
-    projectId: 'academic-calendar-2cbd4',
-    storageBucket: 'academic-calendar-2cbd4.appspot.com',
-    iosClientId: '802440191160-5nmrpghqt69duidbeit56ourfk28c4r6.apps.googleusercontent.com',
-    iosBundleId: 'com.example.calendarApp.RunnerTests',
+    iosBundleId: 'example.calendarapp',
   );
 }

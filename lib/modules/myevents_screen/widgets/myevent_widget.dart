@@ -1,4 +1,4 @@
-import 'package:calendar_app/cubit/calendar_cubit.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_cubit.dart';
 import 'package:calendar_app/models/notification_service.dart';
 import 'package:calendar_app/shared/constants.dart';
 import 'package:flutter/material.dart';

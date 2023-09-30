@@ -22,9 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "add": MessageLookupByLibrary.simpleMessage("إضافة"),
         "addevent": MessageLookupByLibrary.simpleMessage("تم إضافة المناسبة"),
         "app": MessageLookupByLibrary.simpleMessage("التطبيق"),
+        "back": MessageLookupByLibrary.simpleMessage("السابق"),
         "contact": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "date": MessageLookupByLibrary.simpleMessage("تاريخ اليوم"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -35,10 +37,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "eventde": MessageLookupByLibrary.simpleMessage("نبذة عن الحدث"),
         "evente": MessageLookupByLibrary.simpleMessage("تعديل"),
         "eventname": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "fpass": MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "loginE":
+            MessageLookupByLibrary.simpleMessage("حدث مشكلة حاول مرة ثانية"),
+        "loginS": MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "loginSkip": MessageLookupByLibrary.simpleMessage("تخطي التسجيل"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "logoutm": MessageLookupByLibrary.simpleMessage("خروج"),
+        "logoutq":
+            MessageLookupByLibrary.simpleMessage("هل تريد تسجيل الخروج؟"),
         "message": MessageLookupByLibrary.simpleMessage(
             "لا تستطيع إضافة مناسبة فى نفس اليوم"),
+        "messagem": MessageLookupByLibrary.simpleMessage("الرسالة"),
+        "messagesend": MessageLookupByLibrary.simpleMessage("سنراجع رسالتك"),
         "myevent": MessageLookupByLibrary.simpleMessage("مناسباتى"),
+        "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
+        "noaccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "noevents":
             MessageLookupByLibrary.simpleMessage("لا يوجد أحداث حتى الآن"),
         "nomyevents": MessageLookupByLibrary.simpleMessage(
@@ -46,10 +62,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "noti": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "notification": MessageLookupByLibrary.simpleMessage("تفعيل الإشعارات"),
         "ok": MessageLookupByLibrary.simpleMessage("الإعدادات"),
+        "pass": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passR": MessageLookupByLibrary.simpleMessage("تعيين"),
+        "passRS":
+            MessageLookupByLibrary.simpleMessage("تفقد الايميل الخاص بك "),
+        "passf": MessageLookupByLibrary.simpleMessage("تعيين كلمة المرور"),
         "permisd": MessageLookupByLibrary.simpleMessage(
             "من فضلك قم بمنح إذن الإشعارات"),
+        "privacy": MessageLookupByLibrary.simpleMessage("السياسة والخصوصية"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "register": MessageLookupByLibrary.simpleMessage("انشاء حساب الآن"),
+        "rename": MessageLookupByLibrary.simpleMessage("الإسم"),
+        "rephone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "ress": MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الآن"),
+        "send": MessageLookupByLibrary.simpleMessage("إرسال"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "share": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "sub": MessageLookupByLibrary.simpleMessage("تم تفعيل الإشعارات"),
         "theme": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
         "themes": MessageLookupByLibrary.simpleMessage("المظهر"),

@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
-import 'package:calendar_app/cubit/calendar_cubit.dart';
-import 'package:calendar_app/cubit/calendar_states.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_cubit.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_states.dart';
 import 'package:calendar_app/generated/l10n.dart';
 import 'package:calendar_app/modules/home_screen/widgets/date_widget.dart';
 import 'package:calendar_app/modules/home_screen/widgets/event_item_widget.dart';

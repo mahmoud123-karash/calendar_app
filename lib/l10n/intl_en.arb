@@ -28,6 +28,34 @@
     "nomyevents":"",
     "permisd":"",
     "ok":"",
-    "no":""
+    "no":"",
+    "loginS":"",
+    "loginE":"",
+    "login":"",
+    "logout":" ",
+    "pass":"",
+    "register":"",
+    "noaccount":"",
+    "passf":" ",
+    "fpass":"" ,
+    "passR":"",
+    "passRS":"",
+    "rename":"",
+    "rephone":"",
+    "account":"",
+    "ress":"",
+    "next":"",
+    "back":"",
+    "skip":"",
+    "loginSkip":"",
+    "logoutq":"",
+    "logoutm":"",
+    "messagem":"",
+    "send":"",
+    "messagesend":"",
+    "privacy":"",
+    "profile":""
+
+
     
 }

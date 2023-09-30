@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
-import 'package:calendar_app/cubit/calendar_cubit.dart';
-import 'package:calendar_app/cubit/calendar_states.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_cubit.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_states.dart';
 import 'package:calendar_app/layout/widgets/drawer_widget.dart';
 import 'package:calendar_app/modules/home_screen/home_screen.dart';
 import 'package:calendar_app/utils/firebase_messging.dart';

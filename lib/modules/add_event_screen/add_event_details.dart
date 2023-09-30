@@ -1,7 +1,7 @@
 // ignore_for_file: unused_label
 
-import 'package:calendar_app/cubit/calendar_cubit.dart';
-import 'package:calendar_app/cubit/calendar_states.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_cubit.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_states.dart';
 import 'package:calendar_app/generated/l10n.dart';
 import 'package:calendar_app/modules/add_event_screen/widgets/textfield_widget.dart';
 import 'package:calendar_app/shared/components.dart';

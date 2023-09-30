@@ -1,7 +1,9 @@
-import 'package:calendar_app/cubit/calendar_cubit.dart';
-import 'package:calendar_app/cubit/calendar_states.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_cubit.dart';
+import 'package:calendar_app/cubit/calendar_cubit/calendar_states.dart';
 import 'package:calendar_app/generated/l10n.dart';
+import 'package:calendar_app/models/shared_preference.dart';
 import 'package:calendar_app/modules/add_event_screen/add_event_details.dart';
+import 'package:calendar_app/modules/login_screen/login_screen.dart';
 import 'package:calendar_app/modules/myevents_screen/widgets/myevent_widget.dart';
 import 'package:calendar_app/shared/components.dart';
 import 'package:flutter/material.dart';
@@ -32,12 +34,11 @@ class _MyEventsScreenState extends State<MyEventsScreen> {
         return Scaffold(
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              navigatorTo(
-                context,
-                AddEventDetails(
-                  isdark: isdark,
-                ),
-              );
+              if (cache_helper.getData(key: 'uid') != null) {
+                navigatorTo(context, AddEventDetails(isdark: isdark));
+              } else {
+                navigatorTo(context, const LoginScreen());
+              }
             },
             child: const Icon(Icons.add),
           ),
